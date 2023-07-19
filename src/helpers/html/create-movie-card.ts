@@ -4,7 +4,7 @@ import { Movie } from '../../types';
 import toggleLike from './toggle-like';
 
 const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMoviesID: number[]) => {
-    const { id, posterPath, releaseDate, overview } = movie;
+    const { id, poster_path: posterPath, release_date: releaseDate, overview } = movie;
     const isLiked = likedMoviesID.includes(id);
     const movieCard: HTMLElement | null = document.createElement('div');
     movieCard.classList.add('col-12', 'p-2');

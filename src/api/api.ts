@@ -28,11 +28,11 @@ class Api {
 
     private mapper = (movie: MovieResponseDto): Movie => ({
         id: movie.id,
-        posterPath: movie.poster_path,
+        poster_path: movie.poster_path,
         overview: movie.overview,
-        releaseDate: movie.release_date,
+        release_date: movie.release_date,
         title: movie.title,
-        backdropPath: movie.backdrop_path,
+        backdrop_path: movie.backdrop_path,
     });
 
     getPopularMovies = async (page = 1): Promise<Movie[]> => {

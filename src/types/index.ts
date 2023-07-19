@@ -21,11 +21,7 @@ export type MovieResponseDto = {
     vote_count: number;
 };
 
-export type Movie = {
-    id: number;
-    posterPath?: string;
-    overview?: string;
-    releaseDate?: string;
-    title: string;
-    backdropPath?: string;
-};
+export type Movie = Pick<
+    MovieResponseDto,
+    'id' | 'poster_path' | 'overview' | 'release_date' | 'title' | 'backdrop_path'
+>;
