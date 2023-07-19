@@ -1,10 +1,10 @@
-type MovieRequestDto = {
+export type MovieRequestDto = {
     endpoint: string;
     page?: number;
     query?: string;
     movieId?: number;
 };
-type MovieResponseDto = {
+export type MovieResponseDto = {
     adult: boolean;
     backdrop_path: string;
     genre_ids: number[];
@@ -21,7 +21,7 @@ type MovieResponseDto = {
     vote_count: number;
 };
 
-type Movie = {
+export type Movie = {
     id: number;
     posterPath?: string;
     overview?: string;
@@ -29,5 +29,3 @@ type Movie = {
     title: string;
     backdropPath?: string;
 };
-
-export { type MovieRequestDto, type MovieResponseDto, type Movie };

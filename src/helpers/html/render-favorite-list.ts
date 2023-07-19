@@ -1,7 +1,7 @@
+import { CardVariant } from '../../constants/enums/card-variant.enum';
 import { Movie } from '../../types';
 import { getLikedMoviesLS } from '../local-storage';
 import createMovieCard from './create-movie-card';
-import { CardVariant } from '../../config/enums/card-variant.enum';
 import { likedMoviesID, setLikedMoviesID } from '../states';
 
 const renderFavoriteList = (favoriteMovies: Movie[]) => {

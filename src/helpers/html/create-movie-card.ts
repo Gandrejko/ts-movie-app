@@ -1,6 +1,6 @@
-import { Movie } from '../../types';
-import { CardVariant } from '../../config/enums/card-variant.enum';
 import { API_IMAGE_URL } from '../../config/env-config';
+import { CardVariant } from '../../constants/enums/card-variant.enum';
+import { Movie } from '../../types';
 import toggleLike from './toggle-like';
 
 const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMoviesID: number[]) => {
@@ -12,7 +12,7 @@ const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMoviesID: 
         movieCard.classList.add('col-lg-3', 'col-md-4');
     }
     movieCard.innerHTML = `
-      <div class="card shadow-sm">
+      <div class="card shadow-sm h-100">
           <img
               src=${API_IMAGE_URL + posterPath}
               alt="poster"

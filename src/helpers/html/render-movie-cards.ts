@@ -1,5 +1,5 @@
+import { CardVariant } from '../../constants/enums/card-variant.enum';
 import createMovieCard from './create-movie-card';
-import { CardVariant } from '../../config/enums/card-variant.enum';
 import { Movie } from '../../types';
 import { likedMoviesID } from '../states';
 

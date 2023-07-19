@@ -1,4 +1,4 @@
-import { Endpoints } from '../config/enums/endpoints.enum';
+import { Endpoints } from '../constants/enums/endpoints.enum';
 import { Movie, MovieRequestDto, MovieResponseDto } from '../types';
 import removeEmptyKeys from '../helpers/remove-empty-keys';
 import { API_KEY, API_URL } from '../config/env-config';
