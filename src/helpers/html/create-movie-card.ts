@@ -1,12 +1,11 @@
-import { Movie } from '../types';
-import { CardVariant } from '../config/enums/card-variant.enum';
-import { API_IMAGE_URL } from '../config/env-config';
-// eslint-disable-next-line import/no-cycle
-import { toggleLike } from '../main';
+import { Movie } from '../../types';
+import { CardVariant } from '../../config/enums/card-variant.enum';
+import { API_IMAGE_URL } from '../../config/env-config';
+import toggleLike from './toggle-like';
 
-const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMovies: number[]) => {
+const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMoviesID: number[]) => {
     const { id, posterPath, releaseDate, overview } = movie;
-    const isLiked = likedMovies.includes(id);
+    const isLiked = likedMoviesID.includes(id);
     const movieCard: HTMLElement | null = document.createElement('div');
     movieCard.classList.add('col-12', 'p-2');
     if (cardVariant === CardVariant.COMMON) {
@@ -21,6 +20,7 @@ const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMovies: nu
           <svg
               data-id=${id}
               data-like=${isLiked}
+              data-variant=${cardVariant}
               xmlns="http://www.w3.org/2000/svg"
               stroke='red'
               fill=${isLiked ? 'red' : '#ff000078'}
@@ -50,7 +50,7 @@ const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMovies: nu
   `;
 
     const like = movieCard.querySelector('.heart') as SVGSVGElement;
-    like.addEventListener('click', () => toggleLike(like, id, cardVariant));
+    like.addEventListener('click', () => toggleLike(id));
     return movieCard;
 };
 export default createMovieCard;
