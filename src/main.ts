@@ -7,7 +7,8 @@ import changePageType from './helpers/change-page-type';
 import loadMore from './helpers/load-more';
 
 import render from './helpers/render';
-import { getFavoriteMovies, searchMovies } from './helpers/get-movies';
+import { getFavoriteMovies } from './helpers/get-movies';
+import searchMovies from './helpers/search-movies';
 import { likedMovies, page, setLikedMovies } from './helpers/states';
 import renderFavoriteList from './helpers/html/render-favorite-list';
 

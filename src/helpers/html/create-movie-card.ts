@@ -13,10 +13,25 @@ const createMovieCard = (movie: Movie, cardVariant: CardVariant, likedMoviesID: 
     }
     movieCard.innerHTML = `
       <div class="card shadow-sm h-100">
-          <img
-              src=${API_IMAGE_URL + posterPath}
-              alt="poster"
-          />
+            ${
+                posterPath
+                    ? `
+              <img
+                src=${API_IMAGE_URL + posterPath}
+                alt="poster"
+              />
+          `
+                    : `
+              <div class="
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      h-100
+                      align-self-center
+                    "
+                      >No image</div>
+          `
+            }
           <svg
               data-id=${id}
               data-like=${isLiked}
