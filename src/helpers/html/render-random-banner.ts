@@ -2,7 +2,7 @@ import { Movie } from '../../types';
 import { API_IMAGE_URL } from '../../config/env-config';
 
 const renderRandomBanner = (movie: Movie) => {
-    const { backdropPath, title, overview } = movie;
+    const { backdrop_path: backdropPath, title, overview } = movie;
 
     const banner = document.getElementById('random-movie');
     const titleBanner = document.getElementById('random-movie-name');

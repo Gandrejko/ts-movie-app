@@ -8,5 +8,4 @@ export const [pageType, setPageType] = useState(PageType.POPULAR);
 export const [likedMoviesID, setLikedMoviesID] = useState<number[]>(getLikedMoviesLS());
 export const [likedMovies, setLikedMovies] = useState<Movie[]>([]);
 export const [movies, setMovies] = useState<Movie[]>([]);
-
 export const [query, setQuery] = useState<string>('');
